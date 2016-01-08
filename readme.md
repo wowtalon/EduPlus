@@ -4,4 +4,4 @@ It mainly consists of three functions
 2. delete an item from the database
 3. query information from the database
 
-Hello
+Hello world!
