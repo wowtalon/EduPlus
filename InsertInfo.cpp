@@ -7,9 +7,9 @@
 
 using namespace std;
 
-// insert a record into the database, return 0 if succeed, else return 1
+// insert a record into the database, return 1 if succeed, else return 0
 int insertInfo(string stu_number, string stu_name, string stu_birth, string stu_phone) {
-	if(!isexist(stu_number)) {
+	if(!isexist(stu_number, 0)) {
 		string str_insert= "";
 		str_insert += stu_number;
 		str_insert += " ";
@@ -34,8 +34,8 @@ int insertInfo(string stu_number, string stu_name, string stu_birth, string stu_
 		str_file += str_insert;
 		stu_info << str_file;
 		stu_info.close();
-		return 0;
-	} else {
 		return 1;
+	} else {
+		return 0;
 	}
 }
