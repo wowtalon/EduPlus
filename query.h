@@ -11,11 +11,15 @@ using namespace std;
 	0. 仅查询此学号是否存在，若存在则返回该生信息所在行数，否则返回 0
 	1. 查询此学号是否存在，若存在则返回行数同时输出该生信息，否则输出提示无相关信息，返回 0 
 */ 
-int isexist(string stu_number, int method, char * query_file);
+int isexist(string &stu_number, int method, char * query_file);
+
+char *isexist(string &stu_number, char * query_file);
 
 // query a students' info where stu_nember == stu_number, return 0 if succeed, else return 1
-int query_stu(string stu_number);
+int query_stu(string &stu_number);
 
-int query_course(string stu_number);
- 
+int query_course(string &stu_number);
+
+int query_grade(string &stu_number);
+
 #endif

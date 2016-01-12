@@ -46,6 +46,7 @@ void print_menu() {
 	menu += "+------------------------------------------------+";
 	system("cls");
 	cout << menu << endl;
+//	cout << isexist("15336268", 0, s_info) << endl; 
 }
 
 void case_function(int input_case) {
@@ -66,6 +67,9 @@ void case_function(int input_case) {
 				cout << "添加成功" << endl;
 				cout << "您还可以同时添加该生的分数信息和课程信息，是否现在添加？(y/n)" << endl;
 				cin >> yes_no;
+				if (yes_no == 'y') {
+
+				}
 				system("pause");
 			} else {
 				cout << "操作失败" << endl;
@@ -116,11 +120,17 @@ void query_info(string s_number, int method) {
 			system("pause");
 			break;
 		case 1:
+			query_grade(s_number);
+			system("pause");
 			break;
 		case 2:
+			query_course(s_number);
+			system("pause");
 			break;
 		case 3:
 			query_stu(s_number);
+			query_grade(s_number);
+			query_course(s_number);
 			system("pause");
 			break; 
 	}
